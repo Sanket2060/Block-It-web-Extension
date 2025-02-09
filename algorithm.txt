@@ -1,0 +1,20 @@
+Block It-A web extension to block websites by user and show a meaningful productivity motivational quote
+1.Setup for extension
+2.Interface for the web-extension
+3.Block the url
+-store the urls to the storage on chrome
+-retrieve them and check for the match on the entered url to these blocked urls
+    -get the current url and then check
+-manipulate the html tag to have a quote.
+
+
+Problems to the chrome extension:
+Reloading the extension after changes not working properly.
+
+
+Further features:
+-Remove a website
+-Choose between meme image[with image url] or randomized motivational quote
+-Verify if the url is already saved or not
+-Provide a message telling to copy paste the url from the browser searchbar itself.
+-Making the meme fullscreen.
