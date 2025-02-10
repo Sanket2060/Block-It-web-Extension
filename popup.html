@@ -32,7 +32,7 @@
         margin-bottom: 15px;
       }
 
-      input {
+      input[type="text"] {
         width: 100%;
         padding: 10px;
         border: 1px solid #ccc;
@@ -41,7 +41,7 @@
         transition: 0.3s;
       }
 
-      input:focus {
+      input[type="text"]:focus {
         border-color: #007bff;
         box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
       }
@@ -79,6 +79,74 @@
       .unblock-btn:hover {
         background: #a71d2a;
       }
+
+      .extra-options {
+        margin-top: 20px;
+        text-align: left;
+      }
+
+      .radio-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .option {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        background: #f1f1f1;
+        transition: 0.3s;
+      }
+
+      .option:hover {
+        background: #e0e0e0;
+      }
+
+      input[type="radio"] {
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border: 2px solid #007bff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.2s;
+      }
+
+      input[type="radio"]:checked {
+        background: #007bff;
+      }
+
+      .image-container {
+        margin-top: 10px;
+        display: none; /* Hidden by default */
+      }
+
+      .image-btn {
+        background: #ffc107;
+        color: black;
+        width: 100%;
+        margin-top: 5px;
+      }
+
+      .image-btn:hover {
+        background: #e0a800;
+      }
+
+      .quote-btn {
+        background: #28a745;
+        color: white;
+        width: 100%;
+      }
+
+      .quote-btn:hover {
+        background: #1e7e34;
+      }
     </style>
   </head>
   <body>
@@ -88,6 +156,33 @@
       <div class="button-container">
         <button id="block" class="block-btn">Block</button>
         <button id="unblock" class="unblock-btn">Unblock</button>
+      </div>
+
+      <!-- Additional Options -->
+      <div class="extra-options">
+        <div class="radio-group">
+          <label class="option">
+            <input type="radio" name="selection" id="quote-radio" />
+            Get a Motivational Quote
+          </label>
+          <button id="quote" class="quote-btn" style="display: none">
+            Get Quote
+          </button>
+
+          <label class="option">
+            <input type="radio" name="selection" id="image-radio" />
+            Get Your Image
+          </label>
+          <div class="image-container" id="image-container">
+            <input
+              type="text"
+              id="image-url"
+              class="image-input"
+              placeholder="Enter Image URL"
+            />
+            <button id="get-image" class="image-btn">Select Image</button>
+          </div>
+        </div>
       </div>
     </div>
     <script src="popup.js"></script>

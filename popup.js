@@ -1,3 +1,22 @@
+const quoteRadio = document.getElementById("quote-radio");
+const imageRadio = document.getElementById("image-radio");
+const quoteButton = document.getElementById("quote");
+const imageContainer = document.getElementById("image-container");
+
+quoteRadio.addEventListener("change", function () {
+  if (this.checked) {
+    quoteButton.style.display = "block";
+    imageContainer.style.display = "none";
+  }
+});
+
+imageRadio.addEventListener("change", function () {
+  if (this.checked) {
+    quoteButton.style.display = "none";
+    imageContainer.style.display = "block";
+  }
+});
+
 document.getElementById("block").addEventListener("click", function () {
   var url = document.getElementById("url").value;
   console.log("url", url);
