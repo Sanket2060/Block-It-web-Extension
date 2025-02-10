@@ -34,20 +34,7 @@ chrome.runtime.onInstalled.addListener(({ reason }) => {
   }
 });
 let urlData;
-let motivationalQuotes;
 chrome.runtime.onStartup.addListener(() => {
-  motivationalQuotes = [
-    "Success is not final, failure is not fatal: it is the courage to continue that counts.",
-    "Do what you can, with what you have, where you are.",
-    "Believe you can and you’re halfway there.",
-    "Hardships often prepare ordinary people for an extraordinary destiny.",
-    "Don’t watch the clock; do what it does. Keep going.",
-    "It does not matter how slowly you go as long as you do not stop.",
-    "Opportunities don’t happen, you create them.",
-    "Doubt kills more dreams than failure ever will.",
-    "Act as if what you do makes a difference. It does.",
-    "Your time is limited, so don’t waste it living someone else’s life.",
-  ];
   // Perform any necessary operations on startup(restart of chrome)
   chrome.storage.local.get({ url: [] }).then((data) => {
     urlData = data.url;
