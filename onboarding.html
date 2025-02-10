@@ -3,7 +3,245 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Just onboarded</title>
+    <title>Block-It Extension - Onboarding</title>
+    <style>
+      /* General styles */
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9fafb;
+        color: #333;
+        line-height: 1.6;
+        box-sizing: border-box;
+      }
+      h1,
+      h2,
+      h3 {
+        font-weight: 600;
+        margin: 0;
+      }
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 2rem;
+        color: #2d3748;
+      }
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        color: #4a5568;
+      }
+      h3 {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        color: #2d3748;
+      }
+      p {
+        font-size: 1rem;
+        color: #4a5568;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Container for the content */
+      .container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px;
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      /* Features section */
+      .features-list {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        padding: 0;
+        list-style: none;
+      }
+      .features-list li {
+        background-color: #edf2f7;
+        padding: 20px;
+        border-radius: 8px;
+        width: 220px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+      }
+      .features-list li:hover {
+        transform: translateY(-10px);
+      }
+      .features-list li::before {
+        content: "✔";
+        color: #48bb78;
+        font-size: 2rem;
+        margin-right: 10px;
+      }
+
+      /* Installation steps */
+      .installation-steps {
+        margin: 2rem 0;
+      }
+      .installation-steps li {
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 15px;
+      }
+      .installation-steps img {
+        width: 100%;
+        max-width: 450px;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+      .installation-steps img:hover {
+        transform: scale(1.05);
+      }
+
+      /* Custom "Start Using Block-It" text */
+      .start-using {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #48bb78;
+        margin-top: 2rem;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      .start-using:hover {
+        color: #38a169;
+        transform: translateY(-5px);
+      }
+
+      /* Footer */
+      .footer {
+        font-size: 0.9rem;
+        color: #555;
+        margin-top: 3rem;
+        text-align: center;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px;
+        }
+        h1 {
+          font-size: 1.5rem;
+        }
+        h2 {
+          font-size: 1.2rem;
+        }
+        .features-list {
+          gap: 20px;
+        }
+        .features-list li {
+          width: 180px;
+        }
+        .installation-steps img {
+          max-width: 100%;
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1>Welcome to Block-It Extension</h1>
+
+      <!-- Features Section -->
+      <h2>Features</h2>
+      <ul class="features-list">
+        <li>Block Access to Websites</li>
+        <li>Motivational Quotes</li>
+        <li>Funny Meme Images</li>
+        <li>Customizable</li>
+      </ul>
+
+      <!-- Installation Steps -->
+      <h2>Installation Steps</h2>
+      <ol class="installation-steps">
+        <li style="margin-bottom: 100px">
+          <h3>1. Download the Code</h3>
+          <p>
+            Click on the green button to download the code and get the extension
+            files.
+          </p>
+          <img src="image.png" alt="Download Code Button" />
+        </li>
+        <li style="margin-bottom: 100px">
+          <h3>2. Extract the Zip File and Go to chrome Extensions page</h3>
+          <p>
+            After downloading, right-click on the zip file and select "Extract
+            Here".Navigate to
+            <span class="highlight">chrome://extensions</span> in your browser.
+          </p>
+          <img src="image-1.png" alt="Extract File" />
+        </li>
+        <li style="margin-bottom: 100px">
+          <h3>3. Enable Developer Mode</h3>
+          <p>Toggle the Developer Mode option at the top-right corner.</p>
+          <img src="image-2.png" alt="Chrome Extensions Page" />
+        </li>
+        <li style="margin-bottom: 100px">
+          <h3>4. Load Unpacked Extension</h3>
+          <p>
+            Click on "Load Unpacked" and select the folder where you extracted
+            the extension files.
+          </p>
+          <img src="image-3.png" alt="Enable Developer Mode" />
+        </li>
+        <li style="margin-bottom: 100px">
+          <h3>5.Pin the Extension</h3>
+          <p>
+            Click the Puzzle Button in the top-right corner and pin the
+            extension for easy access.
+          </p>
+          <img src="image-4.png" alt="Load Unpacked Button" />
+        </li>
+        <li style="margin-bottom: 100px">
+          <h3>6. You're Done!</h3>
+          <p>
+            You're all set! Start blocking websites and enjoy motivational
+            quotes or memes instead.
+          </p>
+        </li>
+        <li style="margin-bottom: 100px">
+          <h3>For images to use at blocked sites, provide url at extension.</h3>
+        </li>
+        <div class="margin-bottom: 100px">
+          <img src="image-5.png" style="width: 100%" alt="Pin Extension" />
+        </div>
+        <br />
+        <div class="margin-bottom: 100px">
+          <img
+            src="image-6.png"
+            style="width: 100%"
+            alt="Extension Installed"
+          />
+        </div>
+        <br />
+        <div class="margin-bottom: 100px">
+          <img
+            src="image-7.png"
+            style="width: 100%"
+            alt="Extension Installed"
+          />
+        </div>
+      </ol>
+
+      <!-- Start Using Block-It Text -->
+      <p class="start-using">Start Using Block-It</p>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>© 2025 Block-It Extension. All rights reserved.</p>
+      </div>
+    </div>
+  </body>
 </html>
