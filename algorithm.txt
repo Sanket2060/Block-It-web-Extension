@@ -14,7 +14,7 @@ Reloading the extension after changes not working properly.
 
 Further features:
 -Remove a website
--Choose between meme image[with image url] or randomized motivational quote
 -Verify if the url is already saved or not
+-Choose between meme image[with image url] or randomized motivational quote
 -Provide a message telling to copy paste the url from the browser searchbar itself.
 -Making the meme fullscreen.

@@ -1,7 +1,9 @@
 const quoteRadio = document.getElementById("quote-radio");
 const imageRadio = document.getElementById("image-radio");
-const quoteButton = document.getElementById("quote");
+const quoteButton = document.getElementById("quoteButton");
 const imageContainer = document.getElementById("image-container");
+const imageInput = document.getElementById("image-url");
+const imageButton = document.getElementById("imageButton");
 
 quoteRadio.addEventListener("change", function () {
   if (this.checked) {
@@ -15,6 +17,29 @@ imageRadio.addEventListener("change", function () {
     quoteButton.style.display = "none";
     imageContainer.style.display = "block";
   }
+});
+
+imageButton.addEventListener("click", () => {
+  //set the image as the blocksite notice
+  let imageUrl = imageInput.value;
+  console.log("imageUrl", imageUrl);
+  if (!imageUrl) {
+    alert("Please enter a valid image URL");
+  }
+  chrome.storage.local.set({ imageUrl: imageUrl, show: "image" }).then(() => {
+    alert("Image set as background for blocked sites");
+  });
+});
+
+quoteButton.addEventListener("click", () => {
+  //set the quote as the blocksite notice
+  chrome.storage.local
+    .set({
+      show: "quote",
+    })
+    .then(() => {
+      alert("Quote set as background for blocked sites");
+    });
 });
 
 document.getElementById("block").addEventListener("click", function () {
