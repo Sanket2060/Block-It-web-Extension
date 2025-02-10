@@ -15,8 +15,8 @@
     }
   ],
   "icons": {
-    "48": "icon-48.jpg",
-    "96": "icon-96.jpg"
+    "48": "block-it.jpg",
+    "96": "block-it.jpg"
   },
   "background": {
     "service_worker": "background.js"

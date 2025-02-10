@@ -25,6 +25,7 @@ imageButton.addEventListener("click", () => {
   console.log("imageUrl", imageUrl);
   if (!imageUrl) {
     alert("Please enter a valid image URL");
+    return;
   }
   chrome.storage.local.set({ imageUrl: imageUrl, show: "image" }).then(() => {
     alert("Image set as background for blocked sites");

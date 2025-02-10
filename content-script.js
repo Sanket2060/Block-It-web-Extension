@@ -52,9 +52,8 @@
     ];
   }
   window.hasRun = true; // Mark script as executed
-
-  const randomQuote =
-    motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)];
+  // const quoteLength = motivationalQuotes.length; //can't access motivationalQuotes.length is tells it is undefined
+  const randomQuote = motivationalQuotes[Math.floor(Math.random() * 10)];
   console.log("randomQuote", randomQuote);
 
   chrome.storage.local.get({ show: "quote" }).then((result) => {
