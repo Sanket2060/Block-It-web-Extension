@@ -30,4 +30,12 @@ You need to follow some simple steps for installation :
 6. Select the folder you downloaded. And then click on Puzzle button on the top right corner. Click on it and Pin this extension so that you can use it anytime.
    ![alt text](image-4.png)
 
-7. it's done. Have Fun🥳🎉`
+7. It's done. Have Fun🥳🎉
+   Block a website.Keep random quotes or a funny image/meme instead of that image.For images,provide a url to that image in the extension.
+   ![alt text](image-5.png)
+
+![alt text](image-6.png)
+
+and Done.
+
+![alt text](image-7.png)

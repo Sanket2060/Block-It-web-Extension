@@ -4,6 +4,7 @@ const quoteButton = document.getElementById("quoteButton");
 const imageContainer = document.getElementById("image-container");
 const imageInput = document.getElementById("image-url");
 const imageButton = document.getElementById("imageButton");
+const urlInput = document.getElementById("url");
 
 quoteRadio.addEventListener("change", function () {
   if (this.checked) {
@@ -29,6 +30,7 @@ imageButton.addEventListener("click", () => {
   }
   chrome.storage.local.set({ imageUrl: imageUrl, show: "image" }).then(() => {
     alert("Image set as background for blocked sites");
+    imageInput.value = " ";
   });
 });
 
@@ -58,12 +60,14 @@ document.getElementById("block").addEventListener("click", function () {
     });
     if (value) {
       alert("URL " + url + " is already blocked");
+      urlInput.value = " ";
     } else {
       urlData.push(url);
       console.log("urlData from popup", urlData);
       chrome.storage.local.set({ url: urlData }).then(() => {
         console.log("url added");
         alert("URL " + url + " is blocked");
+        urlInput.value = " ";
       });
     }
   });
@@ -84,6 +88,7 @@ document.getElementById("unblock").addEventListener("click", function () {
     });
     if (!value) {
       alert("URL " + url + " is not blocked");
+      urlInput.value = " ";
     } else {
       const index = urlData.indexOf(url);
       let urlArray;
@@ -93,6 +98,7 @@ document.getElementById("unblock").addEventListener("click", function () {
       alert("URL " + urlArray[0] + " is unblocked");
       chrome.storage.local.set({ url: urlData }).then(() => {
         console.log("url removed");
+        urlInput.value = " ";
       });
     }
   });
